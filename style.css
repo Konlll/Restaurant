@@ -1,0 +1,130 @@
+/*
+Colors:
+brown - #65431f;
+olive green - #556a2a;
+beige - #f5f4db;
+umber - #8a3323;
+dark orange - #cf6a00;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
+:root{
+    --brown: #65431f;
+    --olive-green: #556a2a;
+    --beige: #f5f4db;
+    --umber: #8a3323;
+    --dark-orange: #cf6a00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arvo', serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("Source/pexels-emre-can-acer-2079438.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header .logo-container{
+    margin-top: 15px;
+    width: 80%;
+}
+
+header .logo-container h2{
+    color: #fff;
+    text-align: center;
+    font-size: 65px;
+    margin-top: 20px;
+}
+
+header .logo{
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+.continue i{
+    font-size: 115px;
+    color: var(--beige);
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    position: relative;
+    align-items: space-between;
+    height: 100vh;
+    background: url("Source/pexels-mathias-reding-9685245.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav .continue{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .nav-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-row a{
+    width: 55%;
+    text-align: center;
+    background-color: var(--beige);
+    color: var(--umber);
+    text-decoration: none;
+    font-size: 65px;
+    transition: all 0.5s;
+}
+
+.nav-row a:hover{
+    background-color: var(--umber);
+    color: var(--beige);
+}
+
+@media(max-width: 1558px){
+    .nav-row a{
+        width: 70%;
+    }
+}
+
+@media(max-width: 1034px){
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav-row a{
+        width: 85%;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width: 588px){
+    header .logo-container h2{
+        font-size: 45px;
+    }
+    nav .nav-row a{
+        font-size: 35px;
+    }
+}
