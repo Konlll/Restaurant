@@ -74,9 +74,15 @@ nav{
 
 nav .continue{
     position: absolute;
-    top: 5px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+nav :first-child{
+    top: 5px;
+}
+nav :last-child{
+    bottom: 5px;
 }
 
 nav .nav-row{
