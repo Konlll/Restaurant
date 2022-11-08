@@ -9,6 +9,8 @@ dark orange - #cf6a00;
 
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
+/* Color variables */
+
 :root{
     --brown: #65431f;
     --olive-green: #556a2a;
@@ -16,6 +18,8 @@ dark orange - #cf6a00;
     --umber: #8a3323;
     --dark-orange: #cf6a00;
 }
+
+/* Basic styles */
 
 *{
     margin: 0;
@@ -26,6 +30,8 @@ dark orange - #cf6a00;
 body{
     font-family: 'Arvo', serif;
 }
+
+/* Header styles */
 
 header{
     display: flex;
@@ -61,6 +67,8 @@ header .logo{
     color: var(--beige);
     cursor: pointer;
 }
+
+/* Navigation styles */
 
 nav{
     display: flex;
