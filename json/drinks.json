@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Das Kóla",
+        "price": "350"
+    },
+    {
+        "id": 2,
+        "name": "Ásványvíz",
+        "price": "125"
+    },
+    {
+        "id": 3,
+        "name": "Zöld tea",
+        "price": "300"
+    }
+]
