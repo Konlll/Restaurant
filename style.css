@@ -1,0 +1,251 @@
+/*
+Colors:
+brown - #65431f;
+olive green - #556a2a;
+beige - #f5f4db;
+umber - #8a3323;
+dark orange - #cf6a00;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
+/* Color variables */
+
+:root{
+    --brown: #65431f;
+    --olive-green: rgb(85, 106, 42);
+    --beige: #f5f4db;
+    --umber: rgb(138, 51, 35);
+    --dark-orange: #cf6a00;
+}
+
+/* Basic styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arvo', serif;
+}
+
+section{
+    min-height: 100vh;
+}
+
+/* Header styles */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("Source/pexels-emre-can-acer-2079438.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header .logo-container{
+    margin-top: 15px;
+    width: 80%;
+}
+
+header .logo-container h2{
+    color: #fff;
+    text-align: center;
+    font-size: 65px;
+    margin-top: 20px;
+}
+
+header .logo{
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+.continue i{
+    font-size: 115px;
+    color: var(--beige);
+    cursor: pointer;
+}
+
+/* Navigation styles */
+
+nav{
+    display: flex;
+    position: relative;
+    align-items: space-between;
+    height: 100vh;
+    background: url("Source/pexels-mathias-reding-9685245.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav .continue{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav :first-child{
+    top: 5px;
+}
+nav :last-child{
+    bottom: 5px;
+}
+
+nav .nav-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-row a{
+    width: 55%;
+    text-align: center;
+    background-color: var(--beige);
+    color: var(--umber);
+    text-decoration: none;
+    font-size: 65px;
+    transition: all 0.5s;
+}
+
+.nav-row a:hover{
+    background-color: var(--umber);
+    color: var(--beige);
+}
+
+/* Daily menu section */
+section.daily-menu{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Source/pexels-alem-sánchez-612790.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
+}
+.menu h2{
+    color: var(--beige);
+    font-size: 55px;
+}
+
+.menu-item{
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
+    border: 4px solid var(--dark-orange);
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.4s;
+}
+
+/*.menu-item.unchosable{
+    background-color: rgba(138, 51, 35, 0.3);
+    cursor:not-allowed;
+}*/
+
+.menu-item.chosen{
+    background-color: rgba(85, 106, 42, 0.3);
+}
+
+.menu-item *{
+    margin-top: 5px;
+}
+
+.menu .menu-item:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000;
+}
+
+.menu-item h3{
+    font-size: 35px;
+}
+
+.menu-item img{
+    width: 95%;
+}
+
+/* Meals & Drinks section */
+section.meals{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Source/pexels-pixabay-262978.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.meal-drink-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.meals h2,
+.drinks h2{
+    width: 90%;
+    font-size: 45px;
+    margin-left: 30px;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.drinks > p{
+    margin: 20px 0 0 30px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.meal-drink-items .menu-item{
+    width: 20%;
+    margin: 10px;
+    border-color: var(--olive-green)
+}
+
+section.drinks{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("Source/pexels-chevanon-photography-302899.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@media(max-width: 1558px){
+    .nav-row a{
+        width: 70%;
+    }
+}
+
+@media(max-width: 1034px){
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav-row a{
+        width: 85%;
+        margin-top: 15px;
+    }
+    section.daily-menu, .meal-drink-items{
+        flex-direction: column;
+    }
+    .meal-drink-items .menu-item {
+        width: 80%;
+    }
+}
+
+@media(max-width: 588px){
+    header .logo-container h2{
+        font-size: 45px;
+    }
+    nav .nav-row a{
+        font-size: 35px;
+    }
+}
