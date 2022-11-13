@@ -1,7 +1,7 @@
 @echo off
 
-set ExeName =restaurant-server
-set GOOS =windows
+set ExeName=restaurant-server
+set GOOS=windows
 
 if not exist .\build (
     mkdir build
