@@ -19,7 +19,7 @@ const outputData = async (meals, drinks) => {
 
             const template = `<div class="menu-item">
                                 <h3>${data.name}</h3>
-                                <img src="http://localhost:7777/images/${data.imagePath}" alt="${data.name}">
+                                <img src="${data.imagePath}" alt="${data.name}">
                                 <p><b>${data.price} Ft</b></p>
                                 <p><b>Elérhető: ${data.availability}</b></p>
                                 <p><i>Allergének: ${data.allergens ? data.allergens : "-"}</i></p>
@@ -30,15 +30,15 @@ const outputData = async (meals, drinks) => {
             const availabilityHours = data.availability.split("-")
 
 
-            if(hour >= parseInt(availabilityHours[0].substring(0, 2)) && hour < parseInt(availabilityHours[1].substring(0, 2))){
-                if (data.mealType == "Leves") {
-                    dailyMenus[0].innerHTML += template;
-                } else if (data.mealType == "Főétel") {
-                    dailyMenus[1].innerHTML += template;
-                } else if(data.mealType == "Desszert") {
-                    dailyMenus[2].innerHTML += template;
-                }
+            if (data.mealType == "Leves") {
+                dailyMenus[0].innerHTML += template;
+            } else if (data.mealType == "Főétel") {
+                dailyMenus[1].innerHTML += template;
+            } else if(data.mealType == "Desszert") {
+                dailyMenus[2].innerHTML += template;
             }
+            // if(hour >= parseInt(availabilityHours[0].substring(0, 2)) && hour < parseInt(availabilityHours[1].substring(0, 2))){
+            //}
 
         })
     })
@@ -49,7 +49,7 @@ const outputData = async (meals, drinks) => {
         drink.forEach(data => {
             const template = `<div class="menu-item">
                                 <h3>${data.name}</h3>
-                                <img src="http://localhost:7777/images/${data.imagePath}" alt="${data.name}">
+                                <img src="${data.imagePath}" alt="${data.name}">
                                 <p><b>${data.price} Ft</b></p>
                             </div>`
 
