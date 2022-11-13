@@ -1,35 +1,22 @@
-[
-    {
-        "id": 1,
-        "name": "Curry rice",
-        "price": "3000",
-        "allergens": "",
-        "image": "http://www.example.com",
-        "availability": {
-            "startTime": "11:00",
-            "endTime": "17:00"
+{
+    "meals": [
+        {
+            "mealId": 1,
+            "name": "Curry Rice",
+            "price": 300,
+            "allergens": "",
+            "mealType": "Főétel",
+            "imagePath": "http://www.example.com",
+            "availability": "11:00-17:00"
+        },
+        {
+            "mealId": 2,
+            "name": "Tendon",
+            "price": 2500,
+            "allergens": "",
+            "mealType": "Főétel",
+            "imagePath": "http://www.example.com",
+            "availability": "12:00-19:00"
         }
-    },
-    {
-        "id": 2,
-        "name": "Tendon",
-        "price": "2500",
-        "allergens": "",
-        "image": "http://www.example.com",
-        "availability": {
-            "startTime": "12:00",
-            "endTime": "19:00"
-        }
-    },
-    {
-        "id": 3,
-        "name": "Omurice",
-        "price": "2450",
-        "image": "http://www.example.com",
-        "allergens": "",
-        "availability": {
-            "startTime": "7:00",
-            "endTime": "17:00"
-        }
-    }
-]
+    ]
+}
