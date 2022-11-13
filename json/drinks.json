@@ -1,20 +1,22 @@
-[
-    {
-        "id": 1,
-        "name": "Das Kóla",
-        "price": "350",
-        "image": "http://www.example.com"
-    },
-    {
-        "id": 2,
-        "name": "Ásványvíz",
-        "price": "125",
-        "image": "http://www.example.com"
-    },
-    {
-        "id": 3,
-        "name": "Zöld tea",
-        "price": "300",
-        "image": "http://www.example.com"
-    }
-]
+{
+    "drinks": [
+        {
+            "drinkId": 1,
+            "name": "Das Kóla",
+            "price": 350,
+            "imagePath": "http://www.example.com"
+        },
+        {
+            "drinkId": 2,
+            "name": "Ásványvíz",
+            "price": 125,
+            "imagePath": "http://www.example.com"
+        },
+        {
+            "drinkId": 3,
+            "name": "Zöld tea",
+            "price": 300,
+            "imagePath": "http://www.example.com"
+        }
+    ]
+}
