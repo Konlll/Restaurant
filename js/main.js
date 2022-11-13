@@ -1,20 +1,3 @@
-const htmlTemplate = async (name, price, availability, allergen, imagePath) => {
-    return await allergen && availability ? `
-        <div class="menu-item">
-            <h3>${name}</h3>
-            <img src="${imagePath}" alt="Gulyásleves">
-            <p><b>${price} Ft</b></p>
-            <p><b>Elérhető: ${availability}</b></p>
-            <p><i>Allergének: ${allergen}</i></p>
-        </div>`
-        :
-        `<div class="menu-item">
-        <h3>${name}</h3>
-        <img src="${imagePath}" alt="Gulyásleves">
-        <p><b>${price} Ft</b></p>
-    </div>`
-}
-
 const fetchData = async (endpoint) => {
     const res = await fetch(`http://localhost:7777/${endpoint}`)
     const data = await res.json()
