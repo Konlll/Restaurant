@@ -29,6 +29,7 @@ dark orange - #cf6a00;
 
 body{
     font-family: 'Arvo', serif;
+    overflow-x: hidden;
 }
 
 section{
