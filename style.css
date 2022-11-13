@@ -160,7 +160,7 @@ section.daily-menu{
     cursor:not-allowed;
 }*/
 
-.menu-item.chosen{
+.menu-itemchosen{
     background-color: rgba(85, 106, 42, 0.3);
 }
 

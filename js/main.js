@@ -18,9 +18,11 @@ function addOrRemoveItem(event) {
     if(element.innerHTML.indexOf(tag) !== -1) {
         element.innerHTML = element.innerHTML.replace(tag, '');
         parentElement.innerHTML = parentElement.innerHTML.replace(tag, '');
+        event.className = "menu-item";
     } else {
         element.innerHTML += tag;
         parentElement.innerHTML += tag;
+        event.className = "menu-item menu-item-chosen";
     }
 }
 
@@ -43,16 +45,15 @@ const outputData = async (meals, drinks) => {
             const availabilityHours = data.availability.split("-");
 
 
-            if (data.mealType == "Leves") {
-                dailyMenus[0].innerHTML += template
-            } else if (data.mealType == "Főétel") {
-                dailyMenus[1].innerHTML += template;
-            } else if(data.mealType == "Desszert") {
-                dailyMenus[2].innerHTML += template;
+            if(hour >= parseInt(availabilityHours[0].substring(0, 2)) && hour < parseInt(availabilityHours[1].substring(0, 2))){
+                if (data.mealType == "Leves") {
+                    dailyMenus[0].innerHTML += template
+                } else if (data.mealType == "Főétel") {
+                    dailyMenus[1].innerHTML += template;
+                } else if(data.mealType == "Desszert") {
+                    dailyMenus[2].innerHTML += template;
+                }
             }
-            // if(hour >= parseInt(availabilityHours[0].substring(0, 2)) && hour < parseInt(availabilityHours[1].substring(0, 2))){
-            //}
-
         })
     })
 
