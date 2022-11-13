@@ -27,6 +27,10 @@ dark orange - #cf6a00;
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Arvo', serif;
     overflow-x: hidden;
