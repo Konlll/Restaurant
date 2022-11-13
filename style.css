@@ -217,6 +217,54 @@ section.drinks{
     background-size: cover;
 }
 
+/* Contact section */
+section.contact{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("Source/pexels-huy-phan-1383776.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.contact h2{
+    font-size: 72px;
+}
+
+.contact p{
+    font-size: 32px;
+}
+
+.contact-left, .contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact div[class^="contact"]{
+    width: 50%;
+}
+
+.contact iframe{
+    width: 60vh;
+    height: 50vh;
+}
+
+/* Footer */
+footer{
+    width: 100vw;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    font-size: 24px;
+    border-top: 3px solid #fff;
+}
+
 @media(max-width: 1558px){
     .nav-row a{
         width: 70%;
@@ -238,6 +286,9 @@ section.drinks{
     }
     .meal-drink-items .menu-item {
         width: 80%;
+    }
+    .contact{
+        flex-direction: column;
     }
 }
 
