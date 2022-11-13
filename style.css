@@ -137,6 +137,7 @@ section.daily-menu{
     display: flex;
     flex-direction: column;
     margin: 20px 30px;
+    width: 33%;
 }
 .menu h2{
     color: var(--beige);
@@ -294,6 +295,9 @@ footer{
     }
     .contact{
         flex-direction: column;
+    }
+    .menu{
+        width: auto;
     }
 }
 
