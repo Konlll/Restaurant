@@ -27,8 +27,13 @@ dark orange - #cf6a00;
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Arvo', serif;
+    overflow-x: hidden;
 }
 
 section{
@@ -132,6 +137,7 @@ section.daily-menu{
     display: flex;
     flex-direction: column;
     margin: 20px 30px;
+    width: 33%;
 }
 .menu h2{
     color: var(--beige);
@@ -154,7 +160,7 @@ section.daily-menu{
     cursor:not-allowed;
 }*/
 
-.menu-item.chosen{
+.menu-item-chosen{
     background-color: rgba(85, 106, 42, 0.3);
 }
 
@@ -289,6 +295,9 @@ footer{
     }
     .contact{
         flex-direction: column;
+    }
+    .menu{
+        width: auto;
     }
 }
 
