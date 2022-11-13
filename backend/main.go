@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
 
@@ -40,7 +41,12 @@ func main() {
 	defer db.Close()
 	mux := mux.NewRouter()
 
+	header := handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization", "X-Content-Type-Options"})
+	methods := handlers.AllowedMethods([]string{"GET"})
+	origins := handlers.AllowedOrigins([]string{"*"})
+
 	mux.HandleFunc("/meals", Controller_Meal).Methods("GET")
 	mux.HandleFunc("/drinks", Controller_Drink).Methods("GET")
-	http.ListenAndServe(":7777", mux)
+	mux.PathPrefix("/images/").Handler(http.StripPrefix("/images/", http.FileServer(http.Dir("../images/")))) //The HTML file in the images directory is a dirty fix to not display a directory listing, instead send an empty html.
+	http.ListenAndServe(":7777", handlers.CORS(header, methods, origins)(mux))
 }
