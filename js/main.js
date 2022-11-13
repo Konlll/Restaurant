@@ -10,28 +10,41 @@ fetchData("meals").then(meals => {
     })
 })
 
+function addOrRemoveItem(event) {
+    const element = event.getElementsByTagName('h3')[0];
+    const parentElement = event.parentNode.getElementsByTagName('h2')[0];
+    const tag = '<i class="fa-solid fa-square-check"></i>';
+
+    if(element.innerHTML.indexOf(tag) !== -1) {
+        element.innerHTML = element.innerHTML.replace(tag, '');
+        parentElement.innerHTML = parentElement.innerHTML.replace(tag, '');
+    } else {
+        element.innerHTML += tag;
+        parentElement.innerHTML += tag;
+    }
+}
+
 const outputData = async (meals, drinks) => {
     // Output to Meals and Daily Menu sections
-    const mealsSection = document.querySelector("#meals")
-    const dailyMenus = document.querySelectorAll(".menu")
+    const mealsSection = document.querySelector("#meals");
+    const dailyMenus = document.querySelectorAll(".menu");
     await Object.values(meals).forEach(meal => {
         meal.forEach(data => {
-
-            const template = `<div class="menu-item">
+            const template = `<div class="menu-item" onclick="addOrRemoveItem(this)">
                                 <h3>${data.name}</h3>
                                 <img src="${data.imagePath}" alt="${data.name}">
                                 <p><b>${data.price} Ft</b></p>
                                 <p><b>Elérhető: ${data.availability}</b></p>
                                 <p><i>Allergének: ${data.allergens ? data.allergens : "-"}</i></p>
-                              </div>`
+                              </div>`;
 
-            mealsSection.childNodes[3].innerHTML += template
-            const hour = new Date().getHours()
-            const availabilityHours = data.availability.split("-")
+            mealsSection.childNodes[3].innerHTML += template.replace('<div class="menu-item" onclick="addOrRemoveItem(this)">', '<div class="menu-item">');;
+            const hour = new Date().getHours();
+            const availabilityHours = data.availability.split("-");
 
 
             if (data.mealType == "Leves") {
-                dailyMenus[0].innerHTML += template;
+                dailyMenus[0].innerHTML += template
             } else if (data.mealType == "Főétel") {
                 dailyMenus[1].innerHTML += template;
             } else if(data.mealType == "Desszert") {
@@ -53,7 +66,7 @@ const outputData = async (meals, drinks) => {
                                 <p><b>${data.price} Ft</b></p>
                             </div>`
 
-            drinksSection.childNodes[5].innerHTML += template
+            drinksSection.childNodes[5].innerHTML += template;
         })
     })
 }
