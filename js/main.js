@@ -10,7 +10,7 @@ fetchData("meals").then(meals => {
     })
 })
 
-function addOrRemoveItem(event) {
+const addOrRemoveItem = event => {
     const element = event.getElementsByTagName('h3')[0];
     const parentElement = event.parentNode.getElementsByTagName('h2')[0];
     const tag = '<i class="fa-solid fa-square-check"></i>';

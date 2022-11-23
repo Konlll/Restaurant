@@ -296,6 +296,20 @@ footer{
     .contact{
         flex-direction: column;
     }
+    .contact-left{
+        width: 80% !important;
+    }
+    .contact-left h2{
+        font-size: 48px;
+    }
+    .contact-left p{
+        font-size: 24px;
+    }
+    .contact-right{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
     .menu{
         width: auto;
     }
@@ -307,5 +321,11 @@ footer{
     }
     nav .nav-row a{
         font-size: 35px;
+    }
+    .contact-left p{
+        font-size: 20px;
+    }
+    iframe{
+        width: 300px !important;
     }
 }
